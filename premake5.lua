@@ -13,6 +13,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "NicoBGameEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "NicoBGameEngine/vendor/Glad/include"
+IncludeDir["glm"] =  "NicoBGameEngine/vendor/glm"
 
 include "NicoBGameEngine/vendor/GLFW"
 include "NicoBGameEngine/vendor/Glad"
@@ -38,6 +39,7 @@ project "NicoBGameEngine"
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -86,7 +88,8 @@ project "Sandbox"
 
 	includedirs
 	{
-		"NicoBGameEngine/src"
+		"NicoBGameEngine/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links

@@ -1,5 +1,9 @@
 #pragma once
 
-#include "Application.h"
+#include "Core/Application.h"
 
-#include "EntryPoint.h"
+#include "Core/Input.h"
+#include "Core/KeyCodes.h"
+#include "Core/MouseCodes.h"
+
+#include "Core/EntryPoint.h"
